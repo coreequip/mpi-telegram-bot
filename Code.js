@@ -2,7 +2,7 @@ function postJobs() {
     const BOT_TOKEN = PropertiesService.getScriptProperties().getProperty('BOT_TOKEN')
     const CHANNEL_NAME = 'michaelpageinterim'
     const LAST_ID_KEY = 'lastId'
-    const REGEX = /<h3><a href="(.*?)".*id="job-(.*?)"\s*>(.*)<\/a>[\s\S]*?job-location[\s\S]*?<\/i>([\s\S]+?)<\/div>[\s\S]*?job_advert__job-summary-text">([\s\S]+?)<\/div>[\s\S]*?<ul>([\s\S]+?)<\/ul>/g
+    const REGEX = /<h3><a href="(.*?)".*?id="job-(.*?)"\s*>(.*?)<\/a>[\s\S]*?job-location[\s\S]*?<\/i>([\s\S]+?)<\/div>[\s\S]*?job_advert__job-summary-text">([\s\S]+?)<\/div>[\s\S]*?<ul>([\s\S]+?)<\/ul>/g
     const MP_JOBPAGE_URL = 'https://www.michaelpage.de/jobs/information-technology?contract=temp&sort_by=most_recent'
 
     const html = UrlFetchApp.fetch(MP_JOBPAGE_URL).getContentText()
